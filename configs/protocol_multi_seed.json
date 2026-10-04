@@ -1,0 +1,158 @@
+{
+    "status": "frozen before any multi-seed training run",
+    "purpose": "measure how much results vary between training seeds, and test whether the earlier single-seed findings hold",
+    "informed_by": [
+        "single-seed results under configs/protocol_first_evaluation.json and configs/protocol_follow_up.json",
+        "the exploration results, which set the 50000-update budget"
+    ],
+    "artifacts": "artifacts/4_multi_seed",
+    "seeds": [
+        1,
+        2,
+        3,
+        4,
+        5
+    ],
+    "seed_note": "seed 1 repeats the settings of the earlier single-seed models",
+    "conditions": {
+        "bc_10k": {
+            "config": "configs/bc_lift_10k.json",
+            "updates": 10000,
+            "description": "full training episodes, 10000 updates"
+        },
+        "bc_50k": {
+            "config": "configs/bc_lift_50k.json",
+            "updates": 50000,
+            "description": "full training episodes, 50000 updates"
+        },
+        "aligned_10k": {
+            "config": "configs/bc_matched_aligned_10k.json",
+            "updates": 10000,
+            "description": "timing control, 10000 updates"
+        },
+        "shifted_10k": {
+            "config": "configs/bc_shift_plus_3_10k.json",
+            "updates": 10000,
+            "description": "labels from 3 steps later, 10000 updates"
+        },
+        "aligned_50k": {
+            "config": "configs/bc_matched_aligned_50k.json",
+            "updates": 50000,
+            "description": "timing control, 50000 updates"
+        },
+        "shifted_50k": {
+            "config": "configs/bc_shift_plus_3_50k.json",
+            "updates": 50000,
+            "description": "labels from 3 steps later, 50000 updates"
+        }
+    },
+    "checkpoint_rule": "last",
+    "checkpoint_rule_note": "each model is evaluated at its final checkpoint; no checkpoint is selected after training",
+    "comparisons": [
+        {
+            "control": "bc_10k",
+            "treatment": "bc_50k",
+            "differs_in": "training length",
+            "question": "does longer training help?"
+        },
+        {
+            "control": "aligned_10k",
+            "treatment": "shifted_10k",
+            "differs_in": "action labels",
+            "question": "does the label shift help at the short budget?"
+        },
+        {
+            "control": "aligned_50k",
+            "treatment": "shifted_50k",
+            "differs_in": "action labels",
+            "question": "does the label shift help at the long budget?"
+        }
+    ],
+    "analysis": {
+        "unit": "successes out of 50 final states, per trained model",
+        "pairing": "models sharing a training seed are compared with each other",
+        "reported": [
+            "successes for every seed",
+            "mean, standard deviation, minimum and maximum per condition",
+            "per-seed differences and an exact sign test per comparison"
+        ],
+        "limits": "with 5 seeds the smallest two-sided sign-test p-value is 0.0625; results are reported whatever they show"
+    },
+    "final": {
+        "num_states": 50,
+        "seeds": [
+            40000,
+            40001,
+            40002,
+            40003,
+            40004,
+            40005,
+            40006,
+            40007,
+            40008,
+            40009,
+            40010,
+            40011,
+            40012,
+            40013,
+            40014,
+            40015,
+            40016,
+            40017,
+            40018,
+            40019,
+            40020,
+            40021,
+            40022,
+            40023,
+            40024,
+            40025,
+            40026,
+            40027,
+            40028,
+            40029,
+            40030,
+            40031,
+            40032,
+            40033,
+            40034,
+            40035,
+            40036,
+            40037,
+            40038,
+            40039,
+            40040,
+            40041,
+            40042,
+            40043,
+            40044,
+            40045,
+            40046,
+            40047,
+            40048,
+            40049
+        ],
+        "state_bank": "artifacts/4_multi_seed/initial_states_final.hdf5",
+        "distinct_from": [
+            "artifacts/1_first_evaluation/initial_states_dev.hdf5",
+            "artifacts/1_first_evaluation/initial_states_final.hdf5",
+            "artifacts/2_diagnosis/initial_states_explore.hdf5",
+            "artifacts/3_follow_up/initial_states_dev.hdf5",
+            "artifacts/3_follow_up/initial_states_final.hdf5"
+        ],
+        "test_mask": "d2p_test",
+        "used_for_selection": false
+    },
+    "rollout": {
+        "horizon": 400,
+        "terminate_on_success": true,
+        "success_criterion": "robomimic EnvRobosuite.is_success()['task'] for Lift",
+        "non_finite_action": "recorded as a policy failure; the trial is kept",
+        "infrastructure_exception": "evaluation marked incomplete; the same initial state is retried after the fix and the retry is recorded"
+    },
+    "revisions": [
+        {
+            "change": "files and folders renamed for readability (artifacts/1_first_evaluation, 2_diagnosis, 3_follow_up, 4_multi_seed; protocol and config names by purpose); no rule, seed, threshold or setting changed"
+        }
+    ]
+}

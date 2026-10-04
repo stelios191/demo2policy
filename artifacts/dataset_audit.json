@@ -1,0 +1,164 @@
+{
+  "source_file": "low_dim_v15.hdf5",
+  "source_sha256": "2067777cb8b532e9263dd09fd6448c41cc31224bb27be4a3b734010ae13eb540",
+  "num_episodes": 200,
+  "total_samples": 9666,
+  "episode_length": {
+    "min": 36,
+    "max": 64,
+    "mean": 48.33
+  },
+  "action_dim": 7,
+  "obs_keys": [
+    "robot0_eef_pos",
+    "robot0_eef_quat",
+    "robot0_gripper_qpos",
+    "object"
+  ],
+  "obs_shapes": {
+    "robot0_eef_pos": [
+      3
+    ],
+    "robot0_eef_quat": [
+      4
+    ],
+    "robot0_gripper_qpos": [
+      2
+    ],
+    "object": [
+      10
+    ]
+  },
+  "observed_ranges": {
+    "actions": {
+      "min": [
+        -1.0,
+        -0.56,
+        -1.0,
+        -0.150659,
+        -1.0,
+        -0.517975,
+        -1.0
+      ],
+      "max": [
+        1.0,
+        0.652,
+        1.0,
+        0.118636,
+        0.305093,
+        0.478234,
+        1.0
+      ]
+    },
+    "obs/robot0_eef_pos": {
+      "min": [
+        -0.147706,
+        -0.045187,
+        0.808841
+      ],
+      "max": [
+        0.062208,
+        0.052717,
+        1.037565
+      ]
+    },
+    "obs/robot0_eef_quat": {
+      "min": [
+        0.941662,
+        -0.257304,
+        -0.02229,
+        -0.058825
+      ],
+      "max": [
+        0.999979,
+        0.331075,
+        0.161846,
+        0.045242
+      ]
+    },
+    "obs/robot0_gripper_qpos": {
+      "min": [
+        0.014595,
+        -0.040415
+      ],
+      "max": [
+        0.040213,
+        -0.017226
+      ]
+    },
+    "obs/object": {
+      "min": [
+        -0.045105,
+        -0.035301,
+        0.813191,
+        -0.084502,
+        -0.091023,
+        -0.033956,
+        -0.999992,
+        -0.041414,
+        -0.053034,
+        -0.213653
+      ],
+      "max": [
+        0.034924,
+        0.050132,
+        0.886722,
+        0.066763,
+        0.056835,
+        0.999818,
+        0.999991,
+        0.172061,
+        0.045549,
+        0.011908
+      ]
+    }
+  },
+  "environment": {
+    "env_name": "Lift",
+    "env_version": "1.5.1",
+    "robots": [
+      "Panda"
+    ],
+    "control_freq_hz": 20,
+    "controller_type": "OSC_POSE",
+    "controller_control_delta": true,
+    "controller_input_range": [
+      -1,
+      1
+    ],
+    "controller_output_min": [
+      -0.05,
+      -0.05,
+      -0.05,
+      -0.5,
+      -0.5,
+      -0.5
+    ],
+    "controller_output_max": [
+      0.05,
+      0.05,
+      0.05,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "gripper_controller": "GRIP"
+  },
+  "observation_source": "simulator state (low-dimensional); not derived from camera images",
+  "upstream_masks": {
+    "20_percent": 40,
+    "20_percent_train": 36,
+    "20_percent_valid": 4,
+    "50_percent": 100,
+    "50_percent_train": 90,
+    "50_percent_valid": 10,
+    "train": 180,
+    "valid": 20
+  },
+  "warnings": [],
+  "split_masks": {
+    "d2p_train": 160,
+    "d2p_val": 20,
+    "d2p_test": 20
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "offset_control_steps": 3,
+  "source_sha256": "cb6688de8328f123baa6033abca4d6ff5715075c34fd640adaac16781b53b6a2",
+  "usage": "supervised behavior-cloning data only; training episodes hold observations and actions and are not valid for demonstration replay or as reinforcement-learning transitions",
+  "matched_aligned": {
+    "file": "lift_matched_aligned.hdf5",
+    "sha256": "bdacaa26eb43c6f9844d2b4a6dc141c6edd93fac5cd9c4862b4598f0c9674e29",
+    "train_episodes": 160,
+    "train_samples": 7218,
+    "total_samples": 9186
+  },
+  "shift_plus_3": {
+    "file": "lift_shift_plus_3.hdf5",
+    "sha256": "c8e9012f2edb3566eef442ce4e2523c1d2ca2fc7e349844ef85c402e1d6c4776",
+    "train_episodes": 160,
+    "train_samples": 7218,
+    "total_samples": 9186
+  }
+}

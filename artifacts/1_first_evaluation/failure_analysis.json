@@ -1,0 +1,80 @@
+{
+  "failures": [
+    {
+      "state_id": "state_20000",
+      "steps": 400,
+      "closest_approach_first_100_steps_m": 0.0209,
+      "first_close_command_step": null,
+      "max_cube_rise_m": 0.0,
+      "final_gripper_height_m": 2.179,
+      "final_distance_to_cube_m": 1.429,
+      "left_demonstrated_range": true
+    },
+    {
+      "state_id": "state_20007",
+      "steps": 400,
+      "closest_approach_first_100_steps_m": 0.0256,
+      "first_close_command_step": 31,
+      "max_cube_rise_m": 0.0,
+      "final_gripper_height_m": 2.115,
+      "final_distance_to_cube_m": 1.649,
+      "left_demonstrated_range": true
+    },
+    {
+      "state_id": "state_20013",
+      "steps": 400,
+      "closest_approach_first_100_steps_m": 0.0208,
+      "first_close_command_step": null,
+      "max_cube_rise_m": 0.0,
+      "final_gripper_height_m": 1.991,
+      "final_distance_to_cube_m": 1.657,
+      "left_demonstrated_range": true
+    },
+    {
+      "state_id": "state_20017",
+      "steps": 400,
+      "closest_approach_first_100_steps_m": 0.0295,
+      "first_close_command_step": 264,
+      "max_cube_rise_m": 0.0044,
+      "final_gripper_height_m": 1.453,
+      "final_distance_to_cube_m": 0.662,
+      "left_demonstrated_range": true
+    },
+    {
+      "state_id": "state_20019",
+      "steps": 400,
+      "closest_approach_first_100_steps_m": 0.0332,
+      "first_close_command_step": null,
+      "max_cube_rise_m": 0.0,
+      "final_gripper_height_m": 1.967,
+      "final_distance_to_cube_m": 1.665,
+      "left_demonstrated_range": true
+    },
+    {
+      "state_id": "state_20029",
+      "steps": 400,
+      "closest_approach_first_100_steps_m": 0.0272,
+      "first_close_command_step": 30,
+      "max_cube_rise_m": 0.0,
+      "final_gripper_height_m": 1.27,
+      "final_distance_to_cube_m": 0.602,
+      "left_demonstrated_range": true
+    },
+    {
+      "state_id": "state_20049",
+      "steps": 400,
+      "closest_approach_first_100_steps_m": 0.027,
+      "first_close_command_step": null,
+      "max_cube_rise_m": 0.0011,
+      "final_gripper_height_m": 0.81,
+      "final_distance_to_cube_m": 0.072,
+      "left_demonstrated_range": false
+    }
+  ],
+  "highest_gripper_position_in_demonstrations_m": 1.038,
+  "successful_trial_steps": {
+    "min": 39,
+    "median": 43.0,
+    "max": 90
+  }
+}

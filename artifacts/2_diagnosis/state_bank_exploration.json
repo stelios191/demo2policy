@@ -1,0 +1,15 @@
+{
+  "state_bank": "artifacts/2_diagnosis/initial_states_explore.hdf5",
+  "state_bank_sha256": "8309ca89754bee4a90a39b02e0af89567afff24d00e61e0de36ba60a5aff5a99",
+  "role": "exploration",
+  "num_states": 100,
+  "max_state_error": 0.0,
+  "max_observation_error": 0.0,
+  "tolerance": 1e-08,
+  "distinctness": {
+    "min_distance_to_demonstration_initial_states": 0.035326704255852256,
+    "min_distance_within_bank": 0.02546333711506215,
+    "min_distance_to_artifacts/1_first_evaluation/initial_states_dev.hdf5": 0.04669742931708879,
+    "min_distance_to_artifacts/1_first_evaluation/initial_states_final.hdf5": 0.04305606326900023
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "state_bank": "artifacts/3_follow_up/initial_states_final.hdf5",
+  "state_bank_sha256": "89cada94acd1f6ebc3a92d556259d31b6c3b38989fb09268ec2f8b4048fcdc99",
+  "role": "final",
+  "num_states": 50,
+  "max_state_error": 0.0,
+  "max_observation_error": 0.0,
+  "tolerance": 1e-08,
+  "distinctness": {
+    "min_distance_to_demonstration_initial_states": 0.04068041267569553,
+    "min_distance_within_bank": 0.04870548111909656,
+    "min_distance_to_artifacts/1_first_evaluation/initial_states_dev.hdf5": 0.042896020596965075,
+    "min_distance_to_artifacts/1_first_evaluation/initial_states_final.hdf5": 0.05407673146796651,
+    "min_distance_to_artifacts/3_follow_up/initial_states_dev.hdf5": 0.034164489398027
+  }
+}

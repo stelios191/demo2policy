@@ -1,0 +1,153 @@
+{
+    "status": "frozen before the main training run; revisions are appended to 'revisions' with a reason",
+    "artifacts": "artifacts/1_first_evaluation",
+    "training": {
+        "config": "configs/bc_lift_10k.json",
+        "seed": 1,
+        "updates_per_epoch": 100,
+        "update_budget": 10000,
+        "checkpoint_updates": [
+            2500,
+            5000,
+            7500,
+            10000
+        ],
+        "train_mask": "d2p_train",
+        "validation_mask": "d2p_val",
+        "device": "cpu",
+        "preprocessing": "identity for observations and actions",
+        "throughput_benchmark": {
+            "source": "discarded bc_smoke run, 300 updates, laptop CPU",
+            "updates_per_second_approx": 700,
+            "budget_decision": "keep the planned 10000 updates; compute time is not a constraint at this throughput"
+        }
+    },
+    "selection": {
+        "candidates": "every scheduled checkpoint",
+        "rule": [
+            "max development_successes",
+            "min validation_mean_episode_mse",
+            "min update"
+        ],
+        "validation_metric": "mean over the 20 validation episodes of each episode's mean squared action error",
+        "forbidden_inputs": [
+            "d2p_test episodes",
+            "final state bank",
+            "final rollout outcomes"
+        ]
+    },
+    "development": {
+        "num_states": 10,
+        "seeds": [
+            10000,
+            10001,
+            10002,
+            10003,
+            10004,
+            10005,
+            10006,
+            10007,
+            10008,
+            10009
+        ],
+        "state_bank": "artifacts/1_first_evaluation/initial_states_dev.hdf5"
+    },
+    "final": {
+        "num_states": 50,
+        "seeds": [
+            20000,
+            20001,
+            20002,
+            20003,
+            20004,
+            20005,
+            20006,
+            20007,
+            20008,
+            20009,
+            20010,
+            20011,
+            20012,
+            20013,
+            20014,
+            20015,
+            20016,
+            20017,
+            20018,
+            20019,
+            20020,
+            20021,
+            20022,
+            20023,
+            20024,
+            20025,
+            20026,
+            20027,
+            20028,
+            20029,
+            20030,
+            20031,
+            20032,
+            20033,
+            20034,
+            20035,
+            20036,
+            20037,
+            20038,
+            20039,
+            20040,
+            20041,
+            20042,
+            20043,
+            20044,
+            20045,
+            20046,
+            20047,
+            20048,
+            20049
+        ],
+        "state_bank": "artifacts/1_first_evaluation/initial_states_final.hdf5",
+        "test_mask": "d2p_test",
+        "used_for_selection": false
+    },
+    "rollout": {
+        "horizon": 400,
+        "terminate_on_success": true,
+        "success_criterion": "robomimic EnvRobosuite.is_success()['task'] for Lift",
+        "non_finite_action": "recorded as a policy failure; the trial is kept",
+        "infrastructure_exception": "evaluation marked incomplete; the same initial state is retried after the fix and the retry is recorded"
+    },
+    "revisions": [
+        {
+            "change": "added alignment_extension decision record",
+            "affects_baseline": false
+        },
+        {
+            "change": "files and folders renamed for readability (artifacts/1_first_evaluation, 2_diagnosis, 3_follow_up, 4_multi_seed; protocol and config names by purpose); no rule, seed, threshold or setting changed",
+            "affects_baseline": false
+        }
+    ],
+    "alignment_extension": {
+        "decision": "run",
+        "decided": "after baseline development selection and before any final state or test episode was evaluated",
+        "reason": "one training run takes about 16 seconds on this machine, so the extension does not displace final evaluation",
+        "conditions": {
+            "matched_aligned": "configs/bc_matched_aligned_10k.json",
+            "shift_plus_3": "configs/bc_shift_plus_3_10k.json"
+        },
+        "offset_control_steps": 3,
+        "matched_on": [
+            "training seed",
+            "observations",
+            "sample count",
+            "sampling order",
+            "preprocessing",
+            "update budget",
+            "checkpoint schedule",
+            "selection rule",
+            "development and final state banks"
+        ],
+        "predeclared": "the measured effect is reported whatever it is, including no effect or an unexpected one; the offset is not tuned against final results",
+        "control_note": "the full-length baseline is not the matched control; matched_aligned is"
+    }
+}

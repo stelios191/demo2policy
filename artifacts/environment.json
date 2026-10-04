@@ -1,0 +1,60 @@
+{
+  "compatibility": {
+    "dataset": "robomimic Lift / PH / low_dim, file low_dim_v15.hdf5",
+    "dataset_env_version": "1.5.1",
+    "dataset_sha256": "2067777cb8b532e9263dd09fd6448c41cc31224bb27be4a3b734010ae13eb540",
+    "egl_probe_build": "built with CMAKE_POLICY_VERSION_MINIMUM=3.5; EGL itself is unavailable on macOS and is not used",
+    "mujoco_pin": "mujoco==3.2.7",
+    "mujoco_pin_reason": "mujoco 3.14.0 (latest at install time) fails in robosuite 1.5.1 binding_utils.get_joint_qpos_addr with AssertionError; 3.2.7 is contemporaneous with the robosuite v1.5.1 release.",
+    "simulator": "robosuite v1.5.1 (source checkout) with DeepMind mujoco bindings; no mujoco-py"
+  },
+  "machine": {
+    "architecture": "arm64",
+    "cpu": "Apple Silicon",
+    "device": "CPU only",
+    "os": "macOS"
+  },
+  "packages": {
+    "egl-probe": "1.0.2",
+    "h5py": "3.16.0",
+    "imageio": "2.38.0",
+    "imageio-ffmpeg": "0.6.0",
+    "matplotlib": "3.11.2",
+    "mujoco": "3.2.7",
+    "numba": "0.67.0",
+    "numpy": "2.4.6",
+    "pytest": "9.1.1",
+    "robomimic": "0.5.0",
+    "robosuite": "1.5.1",
+    "scipy": "1.17.1",
+    "torch": "2.14.0",
+    "torchvision": "0.29.0"
+  },
+  "python": {
+    "executable": ".venv/bin/python",
+    "machine": "arm64",
+    "version": "3.11.15"
+  },
+  "torch": {
+    "cuda_available": false,
+    "mps_available": true
+  },
+  "upstream": {
+    "robomimic": {
+      "commit": "d309eaecc18acf4152a830a895a6984b8ac71b05",
+      "describe": "v0.5.0-15-gd309eae"
+    },
+    "robosuite": {
+      "commit": "51cc01785bab80ffeed20da15e67d7dd4140e76a",
+      "describe": "v1.5.1"
+    }
+  },
+  "verified_locally": {
+    "action_replay": "3 of 3 sampled episodes reach task success; intermediate simulator states are NOT bit-identical to recorded states (max abs deviation 2.07 in one state component, below 0.01 at episode end)",
+    "dataset_opens": true,
+    "demonstration_state_playback_to_video": "1 episode rendered offscreen to mp4 (512x512, agentview), frames non-blank and changing",
+    "learned_policy_rollouts": "verified: see artifacts/1_first_evaluation/rollouts.csv, artifacts/3_follow_up/ and artifacts/4_multi_seed/",
+    "reset_to_recorded_state": "observations match recorded values exactly for 3 sampled episodes",
+    "training_and_checkpoint_reload": "verified: checkpoints reload, repeated and re-serialized inference agree exactly, and retraining reproduces identical weights"
+  }
+}

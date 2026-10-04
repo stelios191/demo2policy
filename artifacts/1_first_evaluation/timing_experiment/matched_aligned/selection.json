@@ -1,0 +1,70 @@
+{
+  "rule": [
+    "max development_successes",
+    "min validation_mean_episode_mse",
+    "min update"
+  ],
+  "candidates": [
+    {
+      "checkpoint": "runs/bc_matched_aligned_10k/20260929184701/models/model_epoch_25.pth",
+      "checkpoint_sha256": "8b84eb5c4779645b099ecf4f879515bd0ad9df1864b391b9cc0e2ee60aacd1c8",
+      "update": 2500,
+      "development_successes": 5,
+      "development_completed": 10,
+      "validation_mean_episode_mse": 0.039723408693732205,
+      "evidence": {
+        "offline_mask": "d2p_val",
+        "state_bank_role": "development"
+      }
+    },
+    {
+      "checkpoint": "runs/bc_matched_aligned_10k/20260929184701/models/model_epoch_50.pth",
+      "checkpoint_sha256": "aa0e79a68f7c89dd91ad6975aaa89ec3329bfbbeef7a03c58e00a7345c971fe4",
+      "update": 5000,
+      "development_successes": 8,
+      "development_completed": 10,
+      "validation_mean_episode_mse": 0.03511096270565526,
+      "evidence": {
+        "offline_mask": "d2p_val",
+        "state_bank_role": "development"
+      }
+    },
+    {
+      "checkpoint": "runs/bc_matched_aligned_10k/20260929184701/models/model_epoch_75.pth",
+      "checkpoint_sha256": "f488a41ef434467e6b876bb1a1b4755f137d8393988c45db613765c2a3b5c6aa",
+      "update": 7500,
+      "development_successes": 8,
+      "development_completed": 10,
+      "validation_mean_episode_mse": 0.03372329423670682,
+      "evidence": {
+        "offline_mask": "d2p_val",
+        "state_bank_role": "development"
+      }
+    },
+    {
+      "checkpoint": "runs/bc_matched_aligned_10k/20260929184701/models/model_epoch_100.pth",
+      "checkpoint_sha256": "cd2727a2d2c4cab4381777704d5583d2e498752f6c17b1b10a317d79fe2890da",
+      "update": 10000,
+      "development_successes": 10,
+      "development_completed": 10,
+      "validation_mean_episode_mse": 0.03142901781976371,
+      "evidence": {
+        "offline_mask": "d2p_val",
+        "state_bank_role": "development"
+      }
+    }
+  ],
+  "selected": {
+    "checkpoint": "runs/bc_matched_aligned_10k/20260929184701/models/model_epoch_100.pth",
+    "checkpoint_sha256": "cd2727a2d2c4cab4381777704d5583d2e498752f6c17b1b10a317d79fe2890da",
+    "update": 10000,
+    "development_successes": 10,
+    "development_completed": 10,
+    "validation_mean_episode_mse": 0.03142901781976371,
+    "evidence": {
+      "offline_mask": "d2p_val",
+      "state_bank_role": "development"
+    }
+  },
+  "development_state_bank_sha256": "ab12de6bb6c6ca8d75147ce87304bd912f71dccd84f2d0b9de2e9ead4e9fb67f"
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "experiment": "explore_mlp256_200k",
+    "update": 10000,
+    "successes": 84,
+    "completed": 100,
+    "incomplete": false,
+    "median_offset_mm": 12.9,
+    "p90_offset_mm": 26.4
+  },
+  {
+    "experiment": "explore_mlp256_200k",
+    "update": 25000,
+    "successes": 90,
+    "completed": 100,
+    "incomplete": false,
+    "median_offset_mm": 11.9,
+    "p90_offset_mm": 23.4
+  },
+  {
+    "experiment": "explore_mlp256_200k",
+    "update": 50000,
+    "successes": 99,
+    "completed": 100,
+    "incomplete": false,
+    "median_offset_mm": 10.4,
+    "p90_offset_mm": 21.2
+  },
+  {
+    "experiment": "explore_mlp256_200k",
+    "update": 100000,
+    "successes": 97,
+    "completed": 100,
+    "incomplete": false,
+    "median_offset_mm": 9.0,
+    "p90_offset_mm": 16.9
+  },
+  {
+    "experiment": "explore_mlp256_200k",
+    "update": 200000,
+    "successes": 99,
+    "completed": 100,
+    "incomplete": false,
+    "median_offset_mm": 7.9,
+    "p90_offset_mm": 14.7
+  }
+]

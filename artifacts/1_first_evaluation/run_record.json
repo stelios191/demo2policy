@@ -1,0 +1,44 @@
+{
+  "experiment": "bc_lift_10k",
+  "config_file": "configs/bc_lift_10k.json",
+  "config_sha256": "9d603d6ff98c2550d791ed461b27e6fec56c9dfe649f7309f3b0828fbefe4a04",
+  "run_dir": "runs/bc_lift_10k/20260929183827",
+  "seed": 1,
+  "device": "cpu",
+  "updates": 10000,
+  "updates_per_epoch": 100,
+  "runtime_seconds": 15.9,
+  "checkpoints": [
+    {
+      "file": "model_epoch_25.pth",
+      "update": 2500,
+      "sha256": "5676887ed757a8ee5764fc6e8cbe1a838cf779b48e9a3336ed8ed3027e8078f9"
+    },
+    {
+      "file": "model_epoch_50.pth",
+      "update": 5000,
+      "sha256": "771d8f5121e65aa9e1a693d2c52d6483b485dd7363805beedee65f778ae04f37"
+    },
+    {
+      "file": "model_epoch_75.pth",
+      "update": 7500,
+      "sha256": "8f0cd4e130e3d2d39fb015278888d67c2e69177c5af4c0b2e20109fc6ec8adff"
+    },
+    {
+      "file": "model_epoch_100.pth",
+      "update": 10000,
+      "sha256": "38b296e19e6a74141aef36888a3f0864e3dedc40ddf3882729c53cd2ddb060df"
+    }
+  ],
+  "source_data_sha256": "2067777cb8b532e9263dd09fd6448c41cc31224bb27be4a3b734010ae13eb540",
+  "working_data_sha256": "cb6688de8328f123baa6033abca4d6ff5715075c34fd640adaac16781b53b6a2",
+  "versions": {
+    "python": "3.11.15",
+    "torch": "2.14.0",
+    "robomimic": "0.5.0",
+    "robosuite": "1.5.1",
+    "mujoco": "3.2.7",
+    "numpy": "2.4.6",
+    "h5py": "3.16.0"
+  }
+}

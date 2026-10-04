@@ -1,0 +1,20 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      # The tests use synthetic data and a mock simulator, so the simulator stack is not installed here.
+      # The one test that checks configs against robomimic's schema is skipped without robomimic.
+      - run: pip install $(grep -E '^(numpy|h5py|matplotlib|pytest|ruff)==' requirements-lock.txt)
+      - run: ruff check scripts tests
+      - run: ruff format --check scripts tests
+      - run: python -m pytest tests -q

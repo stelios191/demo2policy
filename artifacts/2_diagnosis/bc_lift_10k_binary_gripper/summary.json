@@ -1,0 +1,11 @@
+[
+  {
+    "experiment": "bc_lift_10k_binary_gripper",
+    "update": 10000,
+    "successes": 84,
+    "completed": 100,
+    "incomplete": false,
+    "median_offset_mm": 12.9,
+    "p90_offset_mm": 26.4
+  }
+]

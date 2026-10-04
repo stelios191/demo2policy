@@ -1,0 +1,21 @@
+{
+  "run_id": "development-aa0e79a6-ab12de6b",
+  "checkpoint": "runs/bc_matched_aligned_10k/20260929184701/models/model_epoch_50.pth",
+  "checkpoint_sha256": "aa0e79a68f7c89dd91ad6975aaa89ec3329bfbbeef7a03c58e00a7345c971fe4",
+  "state_bank": "artifacts/1_first_evaluation/initial_states_dev.hdf5",
+  "state_bank_sha256": "ab12de6bb6c6ca8d75147ce87304bd912f71dccd84f2d0b9de2e9ead4e9fb67f",
+  "state_bank_role": "development",
+  "horizon": 400,
+  "success_criterion": "env.is_success()['task']",
+  "summary": {
+    "planned": 10,
+    "attempted": 10,
+    "completed": 10,
+    "successes": 8,
+    "policy_failures": 0,
+    "infrastructure_errors": 0,
+    "incomplete": false,
+    "attempt_records": 10
+  },
+  "success_rate_of_completed": 0.8
+}

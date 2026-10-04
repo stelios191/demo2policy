@@ -1,0 +1,33 @@
+{
+  "longer_training": {
+    "median_mm": 10.9,
+    "p90_mm": 18.2,
+    "failed_trials": []
+  },
+  "first_model_same_states": {
+    "median_mm": 13.4,
+    "p90_mm": 24.9,
+    "failed_trials": [
+      {
+        "state_id": "state_30005",
+        "closed": false,
+        "offset_mm": 22.1
+      },
+      {
+        "state_id": "state_30017",
+        "closed": false,
+        "offset_mm": 16.6
+      },
+      {
+        "state_id": "state_30018",
+        "closed": true,
+        "offset_mm": 28.0
+      },
+      {
+        "state_id": "state_30038",
+        "closed": true,
+        "offset_mm": 45.0
+      }
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "content": "learned-policy rollouts in simulation, re-rendered from recorded simulator states",
+  "selection_rule": "the first follow-up final state, in state order, where the first model failed; both models are shown from that same state",
+  "videos": [
+    {
+      "video": "artifacts/videos/longer_training_state_30005_success.mp4",
+      "content": "learned-policy rollout in simulation, re-rendered from recorded simulator states",
+      "task": "robosuite Lift",
+      "checkpoint_sha256": "5fe04c565b1443753aa37c0d38ad1f961f76c1da208bab1c57dc73dcd628fb5b",
+      "run_id": "final-5fe04c56-89cada94",
+      "state_id": "state_30005",
+      "attempt": 1,
+      "outcome": "success",
+      "steps": 49,
+      "frames": 50,
+      "camera": "sideview",
+      "caption": "50,000 updates: lifts the cube",
+      "policy": "longer_training"
+    },
+    {
+      "video": "artifacts/videos/first_model_same_states_state_30005_failure.mp4",
+      "content": "learned-policy rollout in simulation, re-rendered from recorded simulator states",
+      "task": "robosuite Lift",
+      "checkpoint_sha256": "38b296e19e6a74141aef36888a3f0864e3dedc40ddf3882729c53cd2ddb060df",
+      "run_id": "final-38b296e1-89cada94",
+      "state_id": "state_30005",
+      "attempt": 1,
+      "outcome": "horizon_reached",
+      "steps": 400,
+      "frames": 401,
+      "camera": "sideview",
+      "caption": "10,000 updates: misses the cube",
+      "policy": "first_model_same_states"
+    }
+  ]
+}

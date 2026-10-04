@@ -1,0 +1,56 @@
+{
+  "explore_mlp256_200k": [
+    {
+      "update": 10000,
+      "validation_mean_episode_mse": 0.028292,
+      "successes_of_100": 84
+    },
+    {
+      "update": 25000,
+      "validation_mean_episode_mse": 0.02768,
+      "successes_of_100": 90
+    },
+    {
+      "update": 50000,
+      "validation_mean_episode_mse": 0.02549,
+      "successes_of_100": 99
+    },
+    {
+      "update": 100000,
+      "validation_mean_episode_mse": 0.025972,
+      "successes_of_100": 97
+    },
+    {
+      "update": 200000,
+      "validation_mean_episode_mse": 0.025484,
+      "successes_of_100": 99
+    }
+  ],
+  "explore_mlp1024_200k": [
+    {
+      "update": 10000,
+      "validation_mean_episode_mse": 0.027554,
+      "successes_of_100": 97
+    },
+    {
+      "update": 25000,
+      "validation_mean_episode_mse": 0.027971,
+      "successes_of_100": 93
+    },
+    {
+      "update": 50000,
+      "validation_mean_episode_mse": 0.027244,
+      "successes_of_100": 96
+    },
+    {
+      "update": 100000,
+      "validation_mean_episode_mse": 0.031276,
+      "successes_of_100": 96
+    },
+    {
+      "update": 200000,
+      "validation_mean_episode_mse": 0.036111,
+      "successes_of_100": 88
+    }
+  ]
+}

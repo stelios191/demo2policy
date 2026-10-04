@@ -1,0 +1,13 @@
+{
+  "state_bank": "artifacts/1_first_evaluation/initial_states_dev.hdf5",
+  "state_bank_sha256": "ab12de6bb6c6ca8d75147ce87304bd912f71dccd84f2d0b9de2e9ead4e9fb67f",
+  "role": "development",
+  "num_states": 10,
+  "max_state_error": 0.0,
+  "max_observation_error": 0.0,
+  "tolerance": 1e-08,
+  "distinctness": {
+    "min_distance_to_demonstration_initial_states": 0.04804914625894666,
+    "min_distance_within_bank": 0.10013833412907959
+  }
+}

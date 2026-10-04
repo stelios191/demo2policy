@@ -1,0 +1,21 @@
+{
+  "run_id": "exploration-def6402e-8309ca89",
+  "checkpoint": "runs/explore_mlp256_200k/20260929191722/models/model_epoch_250.pth",
+  "checkpoint_sha256": "def6402e6c44c4d1bb06bedeadca535639a2c316f895a8d74c30598e2b543157",
+  "state_bank": "artifacts/2_diagnosis/initial_states_explore.hdf5",
+  "state_bank_sha256": "8309ca89754bee4a90a39b02e0af89567afff24d00e61e0de36ba60a5aff5a99",
+  "state_bank_role": "exploration",
+  "horizon": 400,
+  "success_criterion": "env.is_success()['task']",
+  "summary": {
+    "planned": 100,
+    "attempted": 100,
+    "completed": 100,
+    "successes": 90,
+    "policy_failures": 0,
+    "infrastructure_errors": 0,
+    "incomplete": false,
+    "attempt_records": 100
+  },
+  "success_rate_of_completed": 0.9
+}
